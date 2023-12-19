@@ -17,5 +17,20 @@ core %>%
   scale_color_manual(values = c("PCE Change" = "blue"), name = NULL)+
   scale_linetype_manual(values = c("2% Fed Target" = "dashed"), name = NULL)
 
+core$fed <- 0
+core$fed[1] <- 0.9995*core$pce[2]
 
 
+for(i in 2:nrow(core)){
+  core$fed[i] <- 1.002*core$fed[i-1]
+}
+
+
+core %>% 
+  mutate(DATE = as.Date(DATE)) %>% 
+  ggplot(aes(x = DATE)) +
+  geom_line(aes(y = pce, color="Core PCE Price Index"), linetype = "solid") +
+  geom_line(aes(y = fed, color= "Fed 2% target"), linetype = "solid") +
+  scale_x_date(date_labels = "%Y", date_breaks = "1 year")+  
+  labs(x =' Core PCE Price Index vs Fed 2%  target' , y = 'Index level, 2018 Q1= 100', title = 'Figure 2: Price level since 2018 Q1 vs 2% trend') +
+  theme_minimal()
