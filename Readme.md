@@ -6,7 +6,7 @@
 ![figure 1](graph.png)
 
 ### Moreover; we want to show the price level or the Core PCE price index agains what the price level would have been had inflation risen every quarter at an annualixed rate of 2%  in absence of covid-19 for the period of 2019-2013. More clearly, we turn to show the realized value of the inflation given the counterfactual covid-19. 
-![figure 2](figure 2.png)
+![figure 2](2 graph.png) 
 ## The graph shwos that the start of covid-19 in the Jan 2020 causesd a sharp fall in the price level widening the gap between realized infaltion and actual PCE core inflation continues till mid-2020, starting 2021, thenpricelevel increased sharply passing the realized price level in end 2021. As the graph shows , the price level reacehd its max level in the mid 2023, far above the realized price level by Fed. 
 
 
